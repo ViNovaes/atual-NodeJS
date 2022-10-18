@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="css/formulario.css">
+
+
+
+<form action="" method="get">
+    <input type="text" name="nome" placeholder="Digite seu nome aqui" required><br>
+    <input type="number" name="idade" placeholder="Digite aqui sua idade" required><br>
+    <input type="number" name="telefone" placeholder="Por favor, digite seu nomero de celular" required><br>
+    <input type="text" name="bairro" placeholder="Digite o nome do seu bairro" required><br>
+    <input type="submit" value="Enviar">
+</form>
+
+<br>
+<br>
+
+{{#formulario}}
+
+    olá {{name}}! Tudo bem? Você tem {{idade}} anos! Mora no bairro {{bairro}}
+
+{{/formulario}}
+

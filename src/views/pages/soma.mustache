@@ -1,0 +1,16 @@
+
+<br>
+<br>
+<h2>Em qual ano você nasceu?</h2><br>
+<form action="idade-resultado" method="post">
+    <input type="text" name="anoNasci" placeholder="Digite aqui o ano em que você nasceu!">
+    <input type="submit" value="Enviar">
+</form>
+
+<br>
+
+{{#mostrarIdade}}
+
+    Você tem {{idade}} anos ou vai fazer!
+
+{{/mostrarIdade}}
