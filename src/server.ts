@@ -4,6 +4,10 @@ import path from 'path'
 //importando o mustache para usar o HTML
 import mustache from 'mustache-express'
 import router from './routes/index'
+//importar as variaveis de ambiente
+import dotenv from 'dotenv'
+//configurando as variaveis
+dotenv.config()
 
 //USANDO EXPRESS
 const server = express()
@@ -26,8 +30,13 @@ server.use(mainRoutes)
 server.use( (req:Request, res:Response) =>{
     res.status(404).send("Página não encontrada")
 })
-server.listen(4000)
 
+
+//inutilizavel depois de instalar o dotenv (.env)
+// server.listen(4000)
+
+
+server.listen(process.env.PORT)
 
 
 
